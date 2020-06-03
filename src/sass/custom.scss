@@ -1,0 +1,90 @@
+a {
+  text-decoration: none;
+  color: $lightColor;
+  &:hover {
+    color: $radiantBlue;
+  }
+}
+
+input {
+  display: block;
+}
+
+input,
+input[type="text"],
+textarea {
+  margin-left: 0.5rem;
+  background-color: transparent;
+  -webkit-appearance: none;
+  box-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  padding: 2px 0;
+  color: $lightColor;
+}
+
+.center-column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.my-button {
+  margin: 1vw;
+  color: $lightColor;
+  text-transform: uppercase;
+  border-radius: 0.5vw;
+  padding: 0.7vw;
+  text-decoration: none;
+  background-color: $navColor;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  transition: all 0.5s ease;
+  border: solid 1px $navColor;
+  &:hover {
+    color: $radiantBlue;
+    background-color: $navGrey;
+    text-decoration: none;
+    box-shadow: inset 0 0 14px 7px rgba(0, 0, 0, 0.5);
+    border: solid 1px rgba(17, 17, 17, 0.6);
+  }
+  &:active {
+    transition: box-shadow 0s linear;
+    box-shadow: inset 0 0 14px 7px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.input-textarea {
+  border-radius: 2px;
+  background-color: $myBlack;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+#interface {
+  margin: 3vh;
+  background-color: $openBlack;
+}
+
+.action-window {
+  margin: 2vw auto;
+  padding: 3vh 3ch;
+}
+
+.window-element {
+  margin: 1vw;
+  background-color: $navGrey;
+  border-radius: 4vw;
+  padding-top: 2vw;
+}
+
+.match-google {
+  height: 40px;
+  border-radius: 3px;
+  width: 185px;
+}

@@ -1,0 +1,13 @@
+.home-title {
+  text-transform: uppercase;
+  color: $radiantBlue;
+  font-weight: bolder;
+
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-description {
+  font-style: italic;
+  font-weight: normal;
+  margin: 3vw auto;
+}

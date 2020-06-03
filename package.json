@@ -10,12 +10,25 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-router": "^5.1.7",
+    "@types/react-router-dom": "^5.1.5",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
     "husky": "^4.2.5",
+    "is-empty": "^1.2.0",
+    "jwt-decode": "^2.2.0",
     "lint-staged": "^10.2.8",
+    "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "typescript": "~3.7.2"
   },
   "lint-staged": {
@@ -38,17 +51,13 @@
     "extends": [
       "react-app"
     ],
-    "rules": {
-      "additional-rule": "warn"
-    },
+    "rules": {},
     "overrides": [
       {
         "files": [
           "**/*.ts?(x)"
         ],
-        "rules": {
-          "additional-typescript-only-rule": "warn"
-        }
+        "rules": {}
       }
     ]
   },

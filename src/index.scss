@@ -1,0 +1,70 @@
+$actionWindowWidth: 95vw;
+@import "sass/myColors";
+@import "sass/CityList";
+@import "sass/MyNavbar";
+@import "sass/Home";
+@import "sass/custom";
+@import "sass/Login&Register";
+
+/* 
+@font-face {
+  font-family: 'Titillium Web', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  text-align: center;
+  background-image: url("http://localhost:8080/images/unnamed.jpg");
+  background-color: $myBlack;
+  /* Used if the image is unavailable */
+  height: 100ch;
+  /* You must set a specified height */
+  background-position: center;
+  /* Center the image */
+  background-repeat: repeat;
+  // background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  margin: 0;
+  // font-family: 'Titillium Web', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $lightColor;
+  overflow-x: hidden;
+  color: $lightColor;
+}
+
+/* activities slider */
+
+.cards-slider {
+  position: relative;
+  max-width: 60%;
+  margin: 0 auto;
+  /*
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      heigh: 264px;
+      outline: 5px solid #61DAFE;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    */
+}
+
+.cards-slider img {
+  max-width: 100%;
+}
