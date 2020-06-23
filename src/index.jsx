@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import jwt_decode from "jwt-decode";
 import { createStore, compose, applyMiddleware } from "redux";
-import { Provider } from "react-redux";
+import { Provider as ReduxProvider } from "react-redux";
 import thunk from "redux-thunk";
 import * as serviceWorker from "./serviceWorker";
 import App from "./App";
@@ -23,6 +23,9 @@ import "./index.scss";
 // <REDUX
 import combineReducers from "./reducers/rootReducer";
 // npm i redux-thunk
+
+// CONTEXT
+import { AppContextProvider } from "./providers/context";
 
 const middleware = [thunk];
 const store = createStore(
@@ -60,9 +63,11 @@ if (localStorage.jwtToken) {
 const Index = () => <App />;
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Index />
-  </Provider>,
+  <AppContextProvider>
+    <ReduxProvider store={store}>
+      <Index />
+    </ReduxProvider>
+  </AppContextProvider>,
   document.getElementById("root")
 );
 

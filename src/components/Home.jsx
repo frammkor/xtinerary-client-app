@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { FormattedMessage, FormattedDate } from "react-intl";
 
 const Home = (props) => {
   const ifUser = props.auth.isAuthenticated
@@ -21,6 +22,10 @@ const Home = (props) => {
       <Link to="/about" className="my-button">
         Learn about the App
       </Link>
+      <FormattedMessage
+        id="app.learn-react-link"
+        description="Link on react page"
+      />
     </div>
   );
 };
