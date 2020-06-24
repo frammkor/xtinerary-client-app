@@ -7,7 +7,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 // <COMPONENTS
 import MyNavbar from "./components/MyNavbar.jsx";
-import Home from "./components/Home";
+import { Home } from "./screens";
 
 // const OtherComponent = React.lazy(() => import('./components/'));
 // COMPONENTS>

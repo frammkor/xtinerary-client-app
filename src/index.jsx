@@ -1,32 +1,28 @@
 /* eslint-disable no-underscore-dangle */
 import React from "react";
 import ReactDOM from "react-dom";
-import jwt_decode from "jwt-decode";
-import { createStore, compose, applyMiddleware } from "redux";
-import { Provider as ReduxProvider } from "react-redux";
-import thunk from "redux-thunk";
 import * as serviceWorker from "./serviceWorker";
 import App from "./App";
 
-// <Auth
+// AUTH
+import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
-// Auth>
 
-// <BOOTSTRAP AND STALING
+// BOOTSTRAP AND STALING
 import "./index.scss";
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import 'jquery/dist/jquery.min.js'
 // import 'bootstrap/dist/js/bootstrap.min.js'
-// BOOTSTRAP AND STALING>
-
-// <REDUX
-import combineReducers from "./reducers/rootReducer";
-// npm i redux-thunk
 
 // CONTEXT
 import { AppContextProvider } from "./providers/context";
 
+// REDUX
+import { createStore, compose, applyMiddleware } from "redux";
+import { Provider as ReduxProvider } from "react-redux";
+import thunk from "redux-thunk";
+import combineReducers from "./reducers/rootReducer";
 const middleware = [thunk];
 const store = createStore(
   combineReducers,
@@ -37,9 +33,7 @@ const store = createStore(
 );
 // const store = createStore(combineReducers, compose(applyMiddleware(...middleware)));
 
-// REDUX>
-
-// <Auth
+// AUTH
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth

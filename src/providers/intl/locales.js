@@ -1,6 +1,6 @@
 export const LOCALES = {
-  ENGLISH: "en-US",
-  GERMAN: "de-DE",
-  FRENCH: "fr-CA",
-  SPANISH: "es-MX",
+  ENGLISH: "en",
+  GERMAN: "de",
+  FRENCH: "fr",
+  SPANISH: "es",
 };
