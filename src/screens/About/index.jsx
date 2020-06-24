@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => (
+const About = () => (
   <>
     <div className="action-window center-column">
       <h4>About this App</h4>
@@ -15,3 +15,5 @@ export default () => (
     </div>
   </>
 );
+
+export default About;

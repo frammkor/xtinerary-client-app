@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-import { addNewItinerary } from "../actions/itinerariesActions";
+import { addNewItinerary } from "../../actions/itinerariesActions";
 
 const ItineraryCreate = (props) => {
   const { cityId, city } = props.match.params;

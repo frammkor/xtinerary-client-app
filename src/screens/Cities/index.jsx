@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import City from "./City";
-// npm prop-types
-import { getAllCities, updateFilteredCities } from "../actions/citiesActions";
+import { CityCard } from "../../components";
+import {
+  getAllCities,
+  updateFilteredCities,
+} from "../../actions/citiesActions";
 
 class CityList extends Component {
   async componentDidMount() {
@@ -14,7 +16,7 @@ class CityList extends Component {
     let { filteredCities } = this.props;
     const toDisplay = filteredCities.map((cityObj) => {
       return (
-        <City
+        <CityCard
           city={cityObj.city}
           country={cityObj.country}
           _id={cityObj._id}
@@ -67,6 +69,7 @@ const mapStateToProps = (state) => {
     allCities: state.citiesReducer.allCities,
   };
 };
+
 export default connect(mapStateToProps, { getAllCities, updateFilteredCities })(
   CityList
 );

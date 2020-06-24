@@ -19,18 +19,16 @@ import translate from "./providers/intl/translate";
 // CONTEXT
 import { AppContext } from "./providers/context";
 
-// lazy loaded
+// LAZY LOADING SCREENS
 const HandleGoogleLogin = React.lazy(() =>
   import("./components/HandleGoogleLogin")
 );
-const Itineraries = React.lazy(() => import("./components/Itineraries"));
-const Login = React.lazy(() => import("./components/Login"));
-const Register = React.lazy(() => import("./components/Register"));
-const CityList = React.lazy(() => import("./components/CityList"));
-const ItineraryCreate = React.lazy(() =>
-  import("./components/ItineraryCreate")
-);
-const About = React.lazy(() => import("./components/About"));
+const Itineraries = React.lazy(() => import("./screens/ItinerariesByCity"));
+const Login = React.lazy(() => import("./screens/Login"));
+const Register = React.lazy(() => import("./screens/Register"));
+const Cities = React.lazy(() => import("./screens/Cities"));
+const ItineraryCreate = React.lazy(() => import("./screens/ItineraryCreate"));
+const About = React.lazy(() => import("./screens/About"));
 
 export default function App() {
   const { state } = useContext(AppContext);
@@ -44,7 +42,7 @@ export default function App() {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
-              <Route path="/cities" component={CityList} />
+              <Route path="/cities" component={Cities} />
               <Route
                 path="/itineraries/:country/:city/:cityId"
                 component={Itineraries}

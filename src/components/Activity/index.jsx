@@ -1,5 +1,5 @@
 import React from "react";
-import ActivityComments from "./ActivityComments";
+import ActivityComments from "../ActivityComments";
 
 const Activity = (props) => {
   return (

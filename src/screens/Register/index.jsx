@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { registerUser } from "../actions/authActions";
+import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-import googleButton from "../img/common/btn_google_signin_dark_normal_web.png";
-import googleButtonHovered from "../img/common/btn_google_signin_dark_pressed_web.png";
+import googleButton from "../../img/common/btn_google_signin_dark_normal_web.png";
+import googleButtonHovered from "../../img/common/btn_google_signin_dark_pressed_web.png";
 
 class Register extends Component {
   constructor() {

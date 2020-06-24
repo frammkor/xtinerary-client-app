@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { getItineraries } from "../actions/itinerariesActions";
-import { getFavorites } from "../actions/favoritesActions";
-import Itinerary from "./Itinerary";
+import { getItineraries } from "../../actions/itinerariesActions";
+import { getFavorites } from "../../actions/favoritesActions";
+import Itinerary from "../../components/Itinerary";
 
 class Itineraries extends Component {
   async componentDidMount() {
